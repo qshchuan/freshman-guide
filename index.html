@@ -1,0 +1,77 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>准大一生存指南</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#f0f2f5;color:#333;padding-bottom:80px}
+.hd{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:36px 20px 48px;text-align:center;border-radius:0 0 28px 28px}
+.hd h1{font-size:24px;font-weight:600;margin-bottom:2px}
+.hd .sub{font-size:13px;opacity:.8;margin-bottom:14px}
+.cd{display:inline-flex;gap:6px;background:rgba(255,255,255,.18);backdrop-filter:blur(8px);padding:10px 20px;border-radius:14px}
+.cd-box{text-align:center;min-width:36px}
+.cd-n{font-size:24px;font-weight:700;display:block}
+.cd-l{font-size:10px;opacity:.65}
+.cd-s{color:rgba(255,255,255,.4);line-height:38px;font-size:18px}
+.w{max-width:480px;margin:-26px auto 0;padding:0 12px;position:relative;z-index:2}
+.c{background:#fff;border-radius:14px;padding:16px;margin-bottom:10px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.ch{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.ct{font-size:15px;font-weight:600;display:flex;align-items:center;gap:6px}
+.cs{font-size:12px;color:#999}
+.pb{height:5px;background:#eee;border-radius:3px;overflow:hidden;margin:8px 0 4px}
+.pf{height:100%;background:linear-gradient(90deg,#667eea,#764ba2);border-radius:3px;transition:width .4s}
+.ci{display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:1px solid #f2f2f2;font-size:14px;line-height:1.5;cursor:pointer}
+.ci:last-child{border-bottom:none}
+.ci input[type=checkbox]{margin-top:3px;width:18px;height:18px;accent-color:#667eea;cursor:pointer;flex-shrink:0}
+.ci.done .cl{color:#bbb;text-decoration:line-through}
+.se{padding:10px 0;border-bottom:1px solid #f2f2f2}
+.se:last-child{border-bottom:none}
+.se h3{font-size:14px;font-weight:600;margin-bottom:4px}
+.se p{font-size:13px;color:#666;line-height:1.6}
+.tg{display:inline-block;font-size:11px;padding:2px 8px;border-radius:6px;background:#f0eeff;color:#667eea}
+.nv{position:fixed;bottom:0;left:0;right:0;background:#fff;display:flex;border-top:1px solid #eee;padding:6px 0 env(safe-area-inset-bottom)}
+.nv a{flex:1;text-align:center;padding:6px;text-decoration:none;color:#999;font-size:11px}
+.nv a.on{color:#667eea}.nv .ni{font-size:20px;display:block;margin-bottom:1px}
+.pg{display:none}.pg.on{display:block}
+@media(min-width:480px){.w{padding:0 20px}.c{padding:18px}}
+</style></head><body>
+<div class="hd">
+<h1>准大一生存指南</h1>
+<div class="sub" id="schooldisp">点击设置学校</div>
+<div class="cd" id="cdown">
+<div class="cd-box"><span class="cd-n" id="dd">--</span><span class="cd-l">天</span></div><span class="cd-s">:</span>
+<div class="cd-box"><span class="cd-n" id="hh">--</span><span class="cd-l">时</span></div><span class="cd-s">:</span>
+<div class="cd-box"><span class="cd-n" id="mm">--</span><span class="cd-l">分</span></div><span class="cd-s">:</span>
+<div class="cd-box"><span class="cd-n" id="ss">--</span><span class="cd-l">秒</span></div>
+</div></div>
+<div class="w">
+<a href="#" onclick="return pg('list')" style="text-decoration:none;color:inherit">
+<div class="c"><div class="ch"><div class="ct">入学物品清单</div><div class="cs" id="sum">0/0</div></div>
+<div class="pb"><div class="pf" id="p1" style="width:0%"></div></div></div></a>
+<div class="c"><div class="ch"><div class="ct">宿舍攻略</div><span class="tg">待补充</span></div>
+<div class="se"><p>床帘、插座、好物推荐...这些东西到了学校再买也不迟</p></div></div>
+<div class="c"><div class="ch"><div class="ct">军训指南</div><span class="tg">待补充</span></div>
+<div class="se"><p>防晒霜买哪种、鞋垫怎么选、哪些东西不能带</p></div></div>
+<div class="c"><div class="ch"><div class="ct">社团与学生会的选择</div><span class="tg">待补充</span></div>
+<div class="se"><p>百团大战怎么选、学生会值得进吗、避坑经验</p></div></div>
+<div class="c"><div class="ch"><div class="ct">开学第一个月指南</div><span class="tg">待补充</span></div>
+<div class="se"><p>报道流程、开学考、选课、适应期该如何度过</p></div></div>
+<div class="c"><div class="ch"><div class="ct">实用工具推荐</div><span class="tg">待补充</span></div>
+<div class="se"><p>好用的APP、网站、学习资源分享</p></div></div>
+<div class="c"><div class="ch"><div class="ct">学长学姐说</div><span class="tg">待补充</span></div>
+<div class="se"><p>来自学长学姐的真实建议和踩坑经验</p></div></div>
+</div>
+<div class="pg" id="pg-list"><div class="w">
+<div class="c"><div class="ch"><div class="ct">入学物品清单</div></div>
+<div class="pb"><div class="pf" id="p2" style="width:0%"></div></div>
+<div id="items"></div></div></div></div>
+<div class="pg" id="pg-about"><div class="w">
+<div class="c"><div class="ch"><div class="ct">关于</div></div>
+<div class="se"><p>这是一个由准大一新生自己动手搭建的入学指南网页，希望能帮到同校的同学。内容正在通过请教前辈慢慢补充中。</p></div>
+<div class="se"><h3>如何修改内容</h3><p>打开 freshman-guide/index.html 找到对应的文字直接替换即可。</p></div>
+</div></div></div>
+<div class="nv">
+<a href="#" class="on" onclick="return pg('home')"><span class="ni">🏠</span>首页</a>
+<a href="#" onclick="return pg('list')"><span class="ni">📋</span>清单</a>
+<a href="#" onclick="return pg('about')"><span class="ni">ℹ️</span>说明</a>
+</div>
+<script>var items=["录取通知书和身份证","一寸二寸证件照","团员档案和学籍档案","手机充电器充电宝","笔记本和笔","洗漱用品","床上三件套","拖鞋和运动鞋","衣架和挂钩","插排","台灯","雨伞","常用药","水杯","锁"];var school="民办二本（船舶与海洋工程）";var target=new Date("2026-09-06T00:00:00");function tick(){var n=new Date(),d=Math.max(0,target-n);document.getElementById("dd").textContent=Math.floor(d/86400000);document.getElementById("hh").textContent=Math.floor(d%86400000/3600000).toString().padStart(2,"0");document.getElementById("mm").textContent=Math.floor(d%3600000/60000).toString().padStart(2,"0");document.getElementById("ss").textContent=Math.floor(d%60000/1000).toString().padStart(2,"0");}function upd(){var s=JSON.parse(localStorage.getItem("cl")||"{}");var n=0;items.forEach(function(_,i){if(s[i])n++});var t=items.length,p=t?(n/t*100):0;document.getElementById("sum").textContent=n+"/"+t;document.getElementById("p1").style.width=p+"%";document.getElementById("p2").style.width=p+"%";}function render(){var s=JSON.parse(localStorage.getItem("cl")||"{}");var h="";items.forEach(function(v,i){var c=s[i]||false;h+="<div class=\"ci "+(c?"done":"")+"\" onclick=\"tog("+i+")\"><input type=\"checkbox\" "+(c?"checked":"")+" onchange=\"tog("+i+")\"><span class=\"cl\">"+v+"</span></div>"});document.getElementById("items").innerHTML=h;upd();}function tog(i){var s=JSON.parse(localStorage.getItem("cl")||"{}");s[i]=!s[i];localStorage.setItem("cl",JSON.stringify(s));render();}function pg(n){document.querySelectorAll(".pg").forEach(function(p){p.classList.remove("on")});document.getElementById("pg-"+n).classList.add("on");document.querySelectorAll(".nv a").forEach(function(a){a.classList.remove("on")});var idx={home:0,list:1,about:2}[n]||0;document.querySelectorAll(".nv a")[idx].classList.add("on");if(n==="list")render();return false;}document.addEventListener("DOMContentLoaded",function(){document.getElementById("schooldisp").textContent=school;tick();setInterval(tick,1000);});</script></body></html>
