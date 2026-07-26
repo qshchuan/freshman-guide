@@ -107,8 +107,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgrou
 </div>
 <div class="se">
 <p><b>校园卡办理</b><br>推荐人：林学长<br>QQ：4572963<br>说明：办理校园电话卡，开学优惠套餐，流量多且送校园宽带。</p>
+<button onclick="toggleImgs()" style="background:none;border:none;color:#667eea;cursor:pointer;font-size:14px;font-weight:500;padding:8px 0;display:block" id="imgBtn">▶ 查看图片</button>
+<div id="imgWrap" style="display:none">
 <p style="margin-top:8px"><img src="card1.jpg" style="max-width:100%;border-radius:8px;margin-bottom:6px;display:block"></p>
 <p><img src="card2.jpg" style="max-width:100%;border-radius:8px;display:block"></p>
+</div>
 <p style="margin-top:8px"></p>
 <p></p>
 <p style="margin-top:8px"></p>
@@ -160,6 +163,7 @@ function dl(i,m){var s=ls("cl"),r=ls("rc"),al=allI();if(i>=0&&i<al.length){r["d_
 function addItem(){var inp=document.getElementById("addInput"),v=inp.value.trim().replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");if(!v)return;must.push(v);sv();inp.value="";ren()}
 function rs(k){var r=ls("rc");if(!r[k])return;must.push(r[k]);delete r[k];ls("rc",r);sv();ren()}
 function switchPage(n){document.querySelectorAll(".pg").forEach(function(p){p.classList.remove("on")});document.getElementById("pg-"+n).classList.add("on");document.querySelectorAll(".nv a").forEach(function(a){a.classList.remove("on")});var idx={home:0,list:1,senior:2,tools:3,about:4}[n]||0;var as=document.querySelectorAll(".nv a");if(as[idx])as[idx].classList.add("on");if(n==="list")ren();return false}
+function toggleImgs(){var w=document.getElementById("imgWrap"),b=document.getElementById("imgBtn");if(w.style.display==="none"){w.style.display="block";b.textContent="▼ 收起图片"}else{w.style.display="none";b.textContent="▶ 查看图片"}}
 document.addEventListener("DOMContentLoaded",function(){upd()})
 </script>
 </body>
