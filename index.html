@@ -2,6 +2,9 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <title>开学准备物品指南</title>
 <style>
@@ -100,7 +103,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgrou
 <div class="ch"><div class="ct">推荐</div></div>
 <div class="se"><p>等你遇到好用的工具推荐给我，我来更新。</p></div>
 <div class="se">
-<p><b>本屋牌宿舍用品</b><br>推荐人：林学长<br>QQ：3429024959（化境）<br>说明：卖本屋牌的宿舍用品，可根据需求咨询。</p>
+<p><b>本屋牌宿舍用品</b><br>推荐人：林学长<br>QQ：3429024959（化境）<br>说明：卖本屋牌的宿舍用品，可根据需求咨询，可直接配送到宿舍门口。</p>
 </div>
 <div class="se" style="border-bottom:none">
 <p style="font-size:11px;color:#bbb;margin-top:6px"><b>免责声明：</b>以上推荐的物品售卖内容均为推荐人个人行为，与本网站无关。购买前请自行判断，本网站不承担任何责任。</p>
@@ -124,8 +127,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgrou
 <a href="#" onclick="return switchPage('about')"><span class="ni">ℹ️</span>关于</a>
 </div>
 <script>
-var must=["录取通知书（原件+复印件）","高考准考证","身份证（原件+建议正反面复印件4份）","证件照（一寸近期免冠半身正面同底版照片十张）","团员档案+学籍档案（切勿拆封）","银行卡（随通知书寄来的那张）","手机+充电器+数据线","充电宝","U盘（推荐32GB）","插排（长线）","台灯（推荐充电式磁吸款）","床垫/床笠","遮光床帘+蚊帐","枕头+被子","牙刷+牙膏+漱口杯","毛巾+浴巾","洗发水+沐浴露（旅行装过渡）","拖鞋","衣架（若干）","水杯","雨伞","常用药（感冒药肠胃药创可贴碘伏棉签）","运动鞋+休闲鞋","衣服","行李箱"];
-var opt=["梳子+镜子","吹风机（注意宿舍功率）","护肤品（水乳精华等，男生可忽略）","化妆品（按个人习惯非必需）","收纳盒+粘钩","衣柜锁","指甲钳+剪刀+水果刀","泡面碗+餐具+洗洁精（学校超市能买）","垃圾桶+垃圾袋（到校再买）","眼罩+耳塞","小夜灯","小风扇","床上桌","订书机+笔记本+笔+文件袋","书包+斜挎包","洗面奶","口罩","军训防晒霜（敏感肌买无酒精款）","军训鞋垫（卫生巾当鞋垫也行）","户口迁移证原件一份（自愿迁户口的新生才带）","笔记本电脑+对应电源适配器"];
+var must=["录取通知书","高考准考证","身份证（原件+建议正反面复印件4份）","证件照（一寸近期免冠半身正面同底版照片十张）","团员档案+学籍档案（切勿拆封）","手机+充电器+数据线","台灯（推荐充电式磁吸款）","床垫/床笠","遮光床帘+蚊帐","枕头+被子","牙刷+牙膏+漱口杯","毛巾+浴巾","洗发水+沐浴露（旅行装过渡）","拖鞋","衣架（若干）","水杯","雨伞","常用药（感冒药肠胃药创可贴碘伏棉签）","运动鞋+休闲鞋","衣服","行李箱"];
+var opt=["梳子+镜子","吹风机（注意宿舍功率）","护肤品（水乳精华等，男生可忽略）","化妆品（按个人习惯非必需）","收纳盒+粘钩","衣柜锁","指甲钳+剪刀+水果刀","泡面碗+餐具+洗洁精（学校超市能买）","垃圾桶+垃圾袋（到校再买）","眼罩+耳塞","小夜灯","小风扇","床上桌","订书机+笔记本+笔+文件袋","书包+斜挎包","洗面奶","口罩","军训防晒霜（敏感肌买无酒精款）","军训鞋垫（卫生巾当鞋垫也行）","户口迁移证原件一份（自愿迁户口的新生才带）","笔记本电脑+对应电源适配器","充电宝","U盘（推荐32GB）","插排（长线）"];
 function ls(k,v){if(v===undefined){try{return JSON.parse(localStorage.getItem(k))||{}}catch(e){return{}}}localStorage.setItem(k,JSON.stringify(v))}
 function allI(){return must.concat(opt)}
 function sv(){ls("cm",must);ls("co",opt)}
