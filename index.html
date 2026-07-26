@@ -148,7 +148,7 @@ document.getElementById("recycleList").innerHTML=h;document.getElementById("recy
 else document.getElementById("recycleBin").style.display="none"}
 function tg(i){var s=ls("cl");s[i]=!s[i];ls("cl",s);ren()}
 function dl(i,m){var s=ls("cl"),r=ls("rc"),al=allI();if(i>=0&&i<al.length){r["d_"+Date.now()]=al[i];ls("rc",r)}delete s[i];ls("cl",s);if(m)must.splice(i,1);else opt.splice(i-must.length,1);sv();ren()}
-function ai(){var inp=document.getElementById("addInput"),v=inp.value.trim().replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");if(!v)return;must.push(v);sv();inp.value="";ren()}
+function addItem(){var inp=document.getElementById("addInput"),v=inp.value.trim().replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");if(!v)return;must.push(v);sv();inp.value="";ren()}
 function rs(k){var r=ls("rc");if(!r[k])return;must.push(r[k]);delete r[k];ls("rc",r);sv();ren()}
 function switchPage(n){document.querySelectorAll(".pg").forEach(function(p){p.classList.remove("on")});document.getElementById("pg-"+n).classList.add("on");document.querySelectorAll(".nv a").forEach(function(a){a.classList.remove("on")});var idx={home:0,list:1,senior:2,tools:3,about:4}[n]||0;var as=document.querySelectorAll(".nv a");if(as[idx])as[idx].classList.add("on");if(n==="list")ren();return false}
 document.addEventListener("DOMContentLoaded",function(){upd()})
