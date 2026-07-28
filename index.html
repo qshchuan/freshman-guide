@@ -72,7 +72,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgrou
 <p><b>开学考试</b><br>开学会有英语考试，考试用四级题型和高中词汇内容。</p>
 </div>
 <div class="se">
-<p><b>宿舍</b><br>宿舍不允许携带较大功率电器，吹风机不允许在宿舍吹头，一楼有专门用吹风机的地方吹头。<br>宿舍不限电量。<br>宿舍晚上11点开始有门禁。<br>宿舍桌子足够摆放27寸显示器加笔记本。</p>
+<p><b>宿舍</b><br>宿舍不允许携带较大功率电器，吹风机不允许在宿舍吹头，一楼有专门用吹风机的地方吹头。<br>宿舍不限电量。<br>宿舍晚上11点开始有门禁。<br>宿舍桌子足够摆放27寸显示器加笔记本。<br>周天到周四11点半断网。<br>热水到凌晨一点。</p>
 </div>
 <div class="se">
 <p><b>网络设施</b><br>无论是江科大还是苏理工，学校选择苏州理工学院，校区共用网络设施。</p>
@@ -96,7 +96,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgrou
 <div id="optList"></div>
 <div id="recycleBin" style="display:none">
 <div class="tl">回收站</div>
-<div class="tml">已删除的物品可以恢复</div>
+<div class="tml">已删除的物品可以恢复（恢复的内容默认加入必须带）</div>
 <div id="recycleList"></div>
 </div>
 </div>
@@ -137,7 +137,28 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgrou
 <div class="wrap">
 <div class="c">
 <div class="ch"><div class="ct">关于</div></div>
- <div class="se"><p>由苏理工准大一新生搭建的入学准备指南。</p><p>制作者：刘磊（船舶与海洋工程）</p><p>如有问题或建议请联系QQ：5709029</p><p>内容来自学长学姐经验以及通知书上的内容，若有不妥之处，请及时联系我，我会及时修改。</p><p>所有添加、删除、恢复的记录都保存在浏览器里，下次打开还在。每个人用自己的浏览器，存自己的数据，互不影响。该网站更新后文本可能会被浏览器缓存影响，可以通过删除浏览器对应缓存来处理。</p></div><div class="se"><h3>更新日志</h3><p style="font-size:12px;color:#999;line-height:1.8">7.26 — 修复添加按钮失效、优化导航布局、新增回收站功能<br>7.25 — 搭建开学准备物品指南网站</p></div>
+<div class="se">
+<p><b>📝 制作说明</b></p>
+<p>· 作者：刘磊（船舶与海洋工程）</p>
+<p>· 联系方式：5709029（QQ）</p>
+<p>· 内容来源：综合学长学姐经验及官方录取通知书整理。欢迎各位提出建议和指出我的不足。</p>
+<p>· 特别声明：本网站为热心新生搭建的个人非官方互助工具，仅供参考。最终开学要求及必备物品，请务必以学校官方《新生入学须知》为准。</p>
+</div>
+<div class="se">
+<p><b>🔒 数据与隐私</b></p>
+<p>· 你在清单中的所有添加、删除、修改记录，仅保存在你当前设备的浏览器本地，下次打开页面仍在。</p>
+<p>· 数据互不影响：不同手机/电脑上的数据完全隔离；作为制作者，我无法查看或获取任何用户保存的清单数据，请放心使用。</p>
+</div>
+<div class="se">
+<p><b>⚙️ 版本更新与缓存</b></p>
+<p>· 网站更新代码后，由于浏览器缓存，旧页面可能不生效。如果需要强制刷新最新内容，请在下方点击"一键刷新页面"。</p>
+<p>⚠️ 重要警告：点击"一键刷新"按钮会清空你当前设备上保存的所有清单数据，恢复到网站初始状态。若你已记录了个人物品，请勿随意点击此按钮。</p>
+<button onclick="localStorage.clear();window.location.href=window.location.pathname+'?t='+Date.now()" style="background:#667eea;color:#fff;border:none;border-radius:8px;padding:8px 16px;font-size:13px;cursor:pointer;margin-top:6px">一键刷新页面</button>
+</div>
+<div class="se"><h3>更新日志</h3><p style="font-size:12px;color:#999;line-height:1.8">7.28 — 优化清单内容、完善宿舍信息<br>7.26 — 修复添加按钮失效、优化导航布局、新增回收站功能<br>7.25 — 搭建开学准备物品指南网站</p></div>
+<div class="se">
+<p><b>致谢</b><br>感谢林学长、钟学长、滕学长、李学长、顾学长提供的宝贵信息和经验。</p>
+</div>
 </div>
 </div>
 </div>
@@ -149,8 +170,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgrou
 <a href="#" onclick="return switchPage('about')"><span class="ni">ℹ️</span>关于</a>
 </div>
 <script>
+var VER="20260726_4";var q=window.location.search;if(!q.includes("t=")){var lv=localStorage.getItem("hg_ver");if(lv&&lv!==VER){localStorage.clear();localStorage.setItem("hg_ver",VER);window.location.href=window.location.pathname+"?t="+Date.now()}else if(!lv){localStorage.setItem("hg_ver",VER)}}else{localStorage.setItem("hg_ver",VER);history.replaceState({},"",window.location.pathname)}
 var must=["录取通知书","高考准考证","身份证（原件+建议正反面复印件4份）","证件照（一寸近期免冠半身正面同底版照片十张，两寸也带一点）","团员证/团员档案/介绍信(没有的可以不带）","个人档案（切勿拆封）","手机+充电器+数据线","台灯（推荐充电式磁吸款）","被胎/床垫/凉席/床单/被套/枕套/枕头/蚊帐或床帘","遮光床帘/蚊帐","枕头+被子","牙刷+牙膏+漱口杯","毛巾+浴巾","洗发水+沐浴露","拖鞋","衣架（若干）","热水壶","雨伞","常用药（感冒药肠胃药创可贴碘伏棉签）","运动鞋+休闲鞋","衣服","行李箱","洗衣粉/洗衣液等常规类洗衣用品","盆","插排（长线）"];
-var opt=["梳子+镜子","吹风机（注意宿舍功率）","护肤品（水乳精华等，男生可忽略）","化妆品（按个人习惯非必需）","挂钩魔术贴","衣柜锁","指甲钳+剪刀+水果刀","泡面碗+餐具+洗洁精","垃圾桶+垃圾袋","眼罩+耳塞","小夜灯","小风扇","床上桌","订书机+笔记本+笔+文件袋","背包","洗面奶","口罩","军训防晒霜（敏感肌买无酒精款）","军训鞋垫（卫生巾当鞋垫也行）","户口迁移证原件一份（自愿迁户口的新生才带）","笔记本电脑+对应电源适配器","充电宝","U盘（推荐32GB）","收纳盒","电竞椅或者人体工学椅","衣篓","晾衣杆（宿舍合购）","置物台（宿舍合购，免打孔的）","拖把（宿舍合购）","饮水机（宿舍合购）","裤腰带（防止军训裤子太大）"];
+var opt=["梳子+镜子","吹风机（注意宿舍功率）","护肤品（水乳精华等，男生可忽略）","化妆品（按个人习惯非必需）","挂钩魔术贴","衣柜锁","指甲钳+剪刀+水果刀","泡面碗+餐具+洗洁精","垃圾桶+垃圾袋","眼罩+耳塞","小夜灯","小风扇","床上桌","订书机+笔记本+笔+文件袋","背包","洗面奶","口罩","军训防晒霜（敏感肌买无酒精款）","军训鞋垫（卫生巾当鞋垫也行）","户口迁移证原件一份（自愿迁户口的新生才带）","笔记本电脑+对应电源适配器","充电宝","U盘（推荐最少32GB，具体情况视专业而定）","收纳盒","电竞椅或者人体工学椅","衣篓","晾衣杆（宿舍合购）","置物台（宿舍合购，免打孔的）","拖把（宿舍合购）","饮水机（宿舍合购）","裤腰带（防止军训裤子太大）"];
 function ls(k,v){if(v===undefined){try{return JSON.parse(localStorage.getItem(k))||{}}catch(e){return{}}}localStorage.setItem(k,JSON.stringify(v))}
 function allI(){return must.concat(opt)}
 function sv(){ls("cm",must);ls("co",opt)}
@@ -167,7 +189,7 @@ document.getElementById("optList").innerHTML=h;rc();upd()}
 function rc(){var r=ls("rc"),k=Object.keys(r),h="";
 if(k.length){k.forEach(function(kk){h+="<div class=\"rci\">"+r[kk]+" <span class=\"dbtn\" onclick=\"rs('"+kk+"')\">↩ 恢复</span></div>"});
 document.getElementById("recycleList").innerHTML=h;document.getElementById("recycleBin").style.display="block"}
-else document.getElementById("recycleBin").style.display="none"}
+else{h="<div class=\"rci\" style=\"color:#ccc\">暂无已删除的物品</div>"}document.getElementById("recycleList").innerHTML=h;document.getElementById("recycleBin").style.display="block"}
 function tg(i){var s=ls("cl");s[i]=!s[i];ls("cl",s);ren()}
 function dl(i,m){var s=ls("cl"),r=ls("rc"),al=allI();if(i>=0&&i<al.length){r["d_"+Date.now()]=al[i];ls("rc",r)}delete s[i];ls("cl",s);if(m)must.splice(i,1);else opt.splice(i-must.length,1);sv();ren()}
 function addItem(){var inp=document.getElementById("addInput"),v=inp.value.trim().replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");if(!v)return;must.push(v);sv();inp.value="";ren()}
